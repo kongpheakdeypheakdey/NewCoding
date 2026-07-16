@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     <title>Health - Medical Website Template</title>
+<!--
+
+Template 2098 Health
+
+http://www.tooplate.com/view/2098-health
+
+-->
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="Tooplate">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <link rel="stylesheet" href="css/bootstrap.min.css">
+     <link rel="stylesheet" href="css/font-awesome.min.css">
+     <link rel="stylesheet" href="css/animate.css">
+     <link rel="stylesheet" href="css/owl.carousel.css">
+     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href="css/tooplate-style.css">
+     <style>
+          body { background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(242,247,253,0.98)); }
+          section#about { position: relative; padding: 100px 0 80px; background: rgba(255,255,255,0.22); }
+          section#about::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.18); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+          section#about .container { position: relative; z-index: 1; }
+          section#about .section-title { margin-bottom: 50px; }
+          .glass-card { background: rgba(255,255,255,0.96); border: 1px solid rgba(255,255,255,0.9); border-radius: 24px; box-shadow: 0 28px 45px rgba(0,0,0,0.08); padding: 32px 26px; min-height: 280px; display: flex; flex-direction: column; align-items: center; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+          .glass-card:hover { transform: translateY(-10px); box-shadow: 0 30px 55px rgba(0,0,0,0.14); }
+          .glass-card .dept-sticker { display: inline-flex; width: 56px; height: 56px; border-radius: 50%; background: rgba(31,111,178,0.14); color: #1f6fb2; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 24px; border: 1px solid rgba(31,111,178,0.2); }
+          .glass-card h4 { margin: 0 0 14px; font-size: 20px; font-weight: 700; letter-spacing: 0.2px; line-height: 1.2; }
+          .glass-card p { margin: 0; color: #555; line-height: 1.7; flex: 1; }
+          section#about .row > [class*="col-"] { margin-bottom: 30px; }
+          .section-title.white-title h2, .section-title.white-title p { color: #fff; }
+          #team .team-grid { margin-top: 30px; }
+          #team .team-grid > [class*="col-"] { margin-bottom: 30px; }
+          #team .doctor-card { background: rgba(255,255,255,0.98); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; height: 100%; }
+          #team .doctor-card:hover { transform: translateY(-8px); box-shadow: 0 28px 48px rgba(0,0,0,0.14); }
+          #team .doctor-card img { width: 100%; height: 320px; object-fit: cover; display: block; }
+          #team .doctor-info { padding: 26px 24px 24px; text-align: center; display: flex; flex-direction: column; flex: 1; }
+          #team .doctor-info h3 { margin: 0 0 10px; font-size: 22px; color: #1f3e6f; }
+          #team .doctor-info p { margin: 0 0 16px; color: #4d4d4d; font-size: 15px; }
+          #team .doctor-contact-info { border-top: 1px solid rgba(31,111,178,0.14); padding-top: 16px; margin-top: auto; }
+          #team .doctor-contact-info p { margin-bottom: 8px; color: #555; font-size: 14px; }
+          #team .doctor-contact-info a { color: #1f6fb2; text-decoration: none; }
+          #team .doctor-card .social-icon { justify-content: center; gap: 10px; margin-top: 14px; display: flex; padding-bottom: 12px; }
+          #team .doctor-card .social-icon li a { width: 40px; height: 40px; line-height: 40px; font-size: 16px; background: #1f6fb2; color: #fff; border-radius: 50%; transition: background 0.3s ease; }
+          #team .doctor-card .social-icon li a:hover { background: #154a82; }
+          section#news .row { row-gap: 32px; }
+          section#news .col-md-4 { margin-bottom: 32px; }
+          section#news .news-thumb { padding-bottom: 20px; }
+          .partnership-section { position: relative; padding: 90px 0 80px; background: linear-gradient(180deg, rgba(17,100,173,0.08), rgba(245,248,255,0.98)); }
+          .partnership-section::before { content: ''; position: absolute; inset: 0; background: rgba(255,255,255,0.55); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); pointer-events: none; }
+          .partnership-section .container { position: relative; z-index: 1; }
+          .partnership-section .section-title, .partnership-section .subsection-title { margin-bottom: 40px; }
+          .partnership-section .section-title h2, .partnership-section .subsection-title h3 { color: #16355f; }
+          .partnership-section .section-title p, .partnership-section .subsection-title p { color: #4f5a6e; max-width: 760px; margin: 0 auto; }
+          .partnership-section .subsection-title h3 { margin-top: 24px; font-size: 26px; letter-spacing: 0.2px; }
+          .partnership-section .partner-card { background: rgba(255,255,255,0.92); border-radius: 28px; padding: 32px 28px; min-height: 220px; box-shadow: 0 26px 45px rgba(29,76,122,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; border: 1px solid rgba(31,111,178,0.12); }
+          .partnership-section .partner-card:hover { transform: translateY(-8px); box-shadow: 0 30px 55px rgba(29,76,122,0.12); }
+          .partnership-section .partner-logo { display: inline-flex; width: 96px; height: 96px; padding: 10px; align-items: center; justify-content: center; border-radius: 0; background: transparent; color: #1f6fb2; font-size: 32px; margin-bottom: 18px; border: none; overflow: hidden; }
+          .partnership-section .partner-logo img { max-width: 100%; max-height: 100%; object-fit: contain; }
+          .partnership-section .partner-logo.partner-logo--img { border-radius: 0; }
+          .partnership-section .partner-logo.partner-logo--icon { border-radius: 0; }
+          .partnership-section .partner-card h4 { margin: 0 0 14px; font-size: 20px; font-weight: 700; color: #1f3e6f; }
+          .partnership-section .partner-card p { margin: 0; font-size: 15px; color: #5e6b7e; line-height: 1.75; }
+          .partnership-section .partner-grid [class*="col-"] { margin-bottom: 30px; }
+          @media (max-width: 767px) {
+               .partnership-section .partner-card { padding: 24px 20px; }
+               .partnership-section .partner-logo { width: 80px; height: 80px; font-size: 28px; padding: 8px; }
+          }
+     </style>
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+
+     <!-- PRE LOADER -->
+     <section class="preloader">
+          <div class="spinner">
+
+               <span class="spinner-rotate"></span>
+               
+          </div>
+     </section>
+
+
+     <!-- HEADER -->
+     <header>
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-5">
+                         <p>Welcome to LUANG MÈ HOSPITAL</p>
+                    </div>
+                         
+                    <div class="col-md-8 col-sm-7 text-align-right">
+                         <span class="phone-icon"><i class="fa fa-phone"></i> 010-228-965</span>
+                         <span class="email-icon"><i class="fa fa-envelope-o"></i> <a href="#">luangme.hospital@gmail.com</a></span>
+                    </div>
+
+               </div>
+          </div>
+     </header>
+
+
+     <!-- MENU -->
+     <section class="navbar navbar-default navbar-static-top" role="navigation">
+          <div class="container">
+
+               <div class="navbar-header">
+                    <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+                    <!-- lOGO TEXT HERE -->
+                    <a href="index.html" class="navbar-brand" aria-label="Luang Mè Hospital">
+                         <img src="images/logo_hospital.png" alt="Luang Mè Hospital logo" style="max-height:50px; display:inline-block; vertical-align:middle;">
+                         <span style="display:inline-block; vertical-align:middle; margin-left:8px; font-weight:700;">LUANG MÈ HOSPITAL</span>
+                    </a>
+               </div>
+
+               <!-- MENU LINKS -->
+               <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                         <li><a href="#top" class="smoothScroll">Home</a></li>
+                         <li><a href="#about" class="smoothScroll">About Us</a></li>
+                         <li><a href="#team" class="smoothScroll">Doctors</a></li>
+                         <li><a href="#news" class="smoothScroll">News</a></li>
+                         <li><a href="#google-map" class="smoothScroll">Contact</a></li>
+                    </ul>
+               </div>
+
+          </div>
+     </section>
+
+
+     <!-- HOME -->
+     <section id="home" class="slider" data-stellar-background-ratio="0.5">
+          <div class="container">
+               <div class="row">
+
+                         <div class="owl-carousel owl-theme">
+                              <div class="item item-first">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Let's make your life happier</h3>
+                                             <h1>Healthy Living</h1>
+                                             <a href="#team" class="section-btn btn btn-default smoothScroll">Meet Our Doctors</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-second">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Aenean luctus lobortis tellus</h3>
+                                             <h1>New Lifestyle</h1>
+                                             <a href="#about" class="section-btn btn btn-default btn-gray smoothScroll">More About Us</a>
+                                        </div>
+                                   </div>
+                              </div>
+
+                              <div class="item item-third">
+                                   <div class="caption">
+                                        <div class="col-md-offset-1 col-md-10">
+                                             <h3>Pellentesque nec libero nisi</h3>
+                                             <h1>Your Health Benefits</h1>
+                                             <a href="#news" class="section-btn btn btn-default btn-blue smoothScroll">Read Stories</a>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+
+               </div>
+          </div>
+     </section>
+
+
+     <!-- ABOUT -->
+     <section id="about" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp white-title" data-wow-delay="0.2s">
+                              <h2 style="color: hsla(219, 63%, 44%, 0.833);">Our Departments</h2>
+                              <p style="color: hsla(219, 63%, 44%, 0.833);">Explore 12 specialized departments at Luang Mè Hospital, each focused on expert care and patient comfort.</p>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.2s">
+                              <span class="dept-sticker"><i class="fa fa-hospital-o"></i></span>
+                              <h4>Outpatient Department (OPD)</h4>
+                              <p>First-stop care for consultations, follow-ups and general outpatient services.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.3s">
+                              <span class="dept-sticker"><i class="fa fa-ambulance"></i></span>
+                              <h4>Emergency Department</h4>
+                              <p>24/7 urgent care, rapid response and critical stabilization for emergency cases.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.4s">
+                              <span class="dept-sticker"><i class="fa fa-eye"></i></span>
+                              <h4>Medical Imaging & Radiology</h4>
+                              <p>Advanced imaging services for accurate diagnosis using X-ray, CT, MRI and ultrasound.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.5s">
+                              <span class="dept-sticker"><i class="fa fa-heartbeat"></i></span>
+                              <h4>Oncology & Radiotherapy</h4>
+                              <p>Comprehensive cancer diagnosis and treatment with supportive radiation therapy care.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.6s">
+                              <span class="dept-sticker"><i class="fa fa-flask"></i></span>
+                              <h4>Laboratory Department (Lab)</h4>
+                              <p>Reliable medical testing and rapid lab results to support clinical decision-making.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.7s">
+                              <span class="dept-sticker"><i class="fa fa-medkit"></i></span>
+                              <h4>Anesthesia & Recovery</h4>
+                              <p>Safe anesthesia services with attentive post-operative recovery monitoring.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.8s">
+                              <span class="dept-sticker"><i class="fa fa-female"></i></span>
+                              <h4>Gynecology Department</h4>
+                              <p>Women’s health care including maternity support, screenings and reproductive wellness.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="0.9s">
+                              <span class="dept-sticker"><i class="fa fa-scissors"></i></span>
+                              <h4>Surgical Department</h4>
+                              <p>Expert surgical teams providing general and specialized procedures with modern techniques.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="1s">
+                              <span class="dept-sticker"><i class="fa fa-heartbeat"></i></span>
+                              <h4>Intensive Care Unit (ICU)</h4>
+                              <p>Critical care support with continuous monitoring for seriously ill and recovering patients.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="1.1s">
+                              <span class="dept-sticker"><i class="fa fa-plus-square"></i></span>
+                              <h4>Pharmacy</h4>
+                              <p>Prescription services, medication counseling and fast pharmaceutical support for patients.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="1.2s">
+                              <span class="dept-sticker"><i class="fa fa-stethoscope"></i></span>
+                              <h4>Endoscopy Department</h4>
+                              <p>Specialized endoscopic exams for digestive health and minimally invasive diagnostics.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="glass-card wow fadeInUp" data-wow-delay="1.3s">
+                              <span class="dept-sticker"><i class="fa fa-wheelchair"></i></span>
+                              <h4>Rehabilitation Services</h4>
+                              <p>Rehab programs for recovery, mobility improvement and long-term physical wellness.</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+     <!-- -------------EAM ------------------->
+     <section id="team" data-stellar-background-ratio="1">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2 style="color: #1f70b2;">Our Director</h2>
+                              <p>Our director of Luang Mè Hospital.</p>
+                         </div>
+                    </div>
+               </div>
+               <div class="row team-grid">
+                    <div class="col-md-4 col-md-offset-4 col-sm-8 col-sm-offset-2">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="0.2s">
+                              <img src="images/dr_lmh1.jpg" class="img-responsive" alt="Dr. Samuel Lee">
+                              <div class="doctor-info">
+                                   <h3>Assistant Professor SOU SYPHANNA</h3>
+                                   <p>Director Hospital</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:samuel.lee@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row team-grid">
+                    <div class="col-md-4 col-sm-6">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="0.4s">
+                              <img src="images/dr.cheat.jpg" class="img-responsive" alt="Dr. Daniel Brown">
+                              <div class="doctor-info">
+                                   <h3>Assistant Professor TOUCH SOCHEAT</h3>
+                                   <p>Deputy Director of the Hospital</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:emily.carter@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="0.6s">
+                              <img src="images/dr.menkry.jpg" class="img-responsive" alt="Dr. Daniel Brown">
+                              <div class="doctor-info">
+                                   <h3>Assistant Professor THAY MENGKRY</h3>
+                                   <p>Deputy Director of the Hospital</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:sophia.nguyen@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="0.8s">
+                              <img src="images/dr.sokha.jpg" class="img-responsive" alt="Dr. Daniel Brown">
+                              <div class="doctor-info">
+                                   <h3>Doctor Specialist CHHUN SOKHA</h3>
+                                   <p>Deputy Director of the Hospital</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:noah.parker@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-linkedin-square"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+               <div class="row team-grid">
+                    <div class="col-md-4 col-sm-6">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="1s">
+                              <img src="images/dr.bel.jpg" class="img-responsive" alt="Dr. Daniel Brown">
+                              <div class="doctor-info">
+                                   <h3>Doctor Specialist SEAP BELL</h3>
+                                   <p>Head of Medical office</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:maya.singh@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-facebook-square"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="1.2s">
+                              <img src="images/lmh5.jpg" class="img-responsive" alt="Dr. Daniel Brown">
+                              <div class="doctor-info">
+                                   <h3>Mr. UN CHANKOSOL</h3>
+                                   <p>Head of Administration office & Human Resource Development</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:daniel.brown@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="doctor-card wow fadeInUp" data-wow-delay="1.4s">
+                              <img src="images/mrs.laty.jpg" class="img-responsive" alt="Dr. Daniel Brown">
+                              <div class="doctor-info">
+                                   <h3>Mrs. MA LATY</h3>
+                                   <p>Head of Accounting office</p>
+                                   <div class="doctor-contact-info">
+                                        <p><i class="fa fa-envelope-o"></i> <a href="mailto:daniel.brown@luangme.hospital">luangme.hospital</a></p>
+                                   </div>
+                                   <ul class="social-icon">
+                                        <li><a href="#" class="fa fa-twitter"></a></li>
+                                        <li><a href="#" class="fa fa-envelope-o"></a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+  <!-- DEPARTMENT OF LUANG MÈ HOSPITAL -->
+     <section id="news" data-stellar-background-ratio="2.5">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                              <h2 style="color: #1f6fb2;">DEPARTMENT OF LUANG MÈ HOSPITAL</h2>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="news-detail.html">
+                                   <img src="images/OPD.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Outpatient Department</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jeremie Carlson</h5>
+                                             <p>CEO / Founder</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                   <img src="images/ED.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Emergency Department</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jason Stewart</h5>
+                                             <p>General Director</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="news-detail.html">
+                                   <img src="images/Radiology.JPG" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Medical Imaging & Radiology</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                              <a href="news-detail.html">
+                                   <img src="images/linac.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Oncology & Radiotherapy</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jeremie Carlson</h5>
+                                             <p>CEO / Founder</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                  <img src="images/lab.JPG" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Laboratory Department</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Jason Stewart</h5>
+                                             <p>General Director</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                              <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                             <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                             <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                             <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.4s">
+                             <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.6s">
+                              <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <!-- NEWS THUMB -->
+                         <div class="news-thumb wow fadeInUp" data-wow-delay="0.8s">
+                           <a href="news-detail.html">
+                                   <img src="images/recovery.jpg" class="img-responsive" alt="">
+                              </a>
+                              <div class="news-info">
+                                   <span></span>
+                                   <h3><a href="news-detail.html">Anesthesia & Recovery</a></h3>
+                                   <p></p>
+                                   <div class="author">
+                                        <img src="images/logo_hospital.png" class="img-responsive" alt="">
+                                        <div class="author-info">
+                                             <h5>Andrio Abero</h5>
+                                             <p>Online Advertising</p>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+
+  <!-- PARTNERSHIPS -->
+  <section id="partnerships" class="partnership-section" data-stellar-background-ratio="3">
+          <div class="container">
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="section-title wow fadeInUp" data-wow-delay="0.4s" style="text-align: center;">
+                              <h2 style="color: #1f6fb2;">Our Partnerships</h2>
+                              <p>Luang Mè Hospital works with trusted partners to deliver exceptional care locally and around the world.</p>
+                         </div>
+                    </div>
+               </div>
+               <div class="row partner-grid">
+                    <div class="col-md-4 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="0.4s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/UHS_Cambodia_logo.png" alt="UHS Cambodia">
+                              </div>
+                              <h4>University of Health Science</h4>
+                              <p></p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="0.6s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/Nokor Tep Organization.png" alt="Nokor Tep Organization">
+                              </div>
+                              <h4>Nokor Tep Organization</h4>
+                              <p></p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="0.8s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/University of Puthisastra.jpg" alt="University of Puthisastra">
+                              </div>
+                              <h4>University of Puthisastra</h4>
+                              <p></p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="1s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/Health Science Institute.png" alt="Health Science Institute">
+                              </div>
+                              <h4>Health Science Institute of RCAF</h4>
+                              <p></p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="1.2s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/CamTech University.jpg" alt="CamTech University">
+                              </div>
+                              <h4>CamTech University</h4>
+                              <p></p>
+                         </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="1.4s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/mou_iu.png" alt="MOU IU">
+                              </div>
+                              <h4>International University</h4>
+                              <p></p>
+                         </div>
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                         <div class="subsection-title wow fadeInUp" data-wow-delay="0.4s" style="text-align: center;">
+                              <h3 style="color: #1f6fb2;">International Partnerships</h3>
+                              <p></p>
+                         </div>
+                    </div>
+               </div>
+               <div class="row partner-grid">
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="1.6s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/International_Atomic_Energy_Agency_Logo.svg.png" alt="IAEA">
+                              </div>
+                              <h4>International Atomic Energy Agency (IAEA)-KAM6005 for 2024-2027 </h4>
+                              <p>for training and technical support</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                          <div class="partner-card wow fadeInUp" data-wow-delay="1.6s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/Physicien Medical.png" alt="IAEA">
+                              </div>
+                              <h4>Physicien Medical Sans Frontières</h4>
+                              <p>for physicist training, Radiation therapy and hand-on training.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="2s">
+                               <div class="partner-logo partner-logo--img">
+                                   <img src="images/avi-logo.jpg" alt="">
+                              </div>
+                              <h4>Australian AID: Australian Volunteer Program (AVI)</h4>
+                              <p>or Australian Volunteers-Experts for Radiotherapy and Infection Prevention-Control.</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="2.2s">
+                               <div class="partner-logo partner-logo--img">
+                                   <img src="images/Logo_of_the_Church_of_Jesus_Christ_of_Latter-day_Saints.svg.png" alt="IAEA">
+                              </div>
+                              <h4>The Association of the Church of Jesus Christ of Latter-Day Saints (Donation)</h4>
+                              <p>CT-Scan worth USD67,950 Mammogram worth USD52,500</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="2.4s">
+                               <div class="partner-logo partner-logo--img">
+                                   <img src="images/logo-ICANS.png" alt="IAEA">
+                              </div>
+                              <h4>Instittut de Cancerologie de Strasbourg</h4>
+                              <p>for HR & Technical Cooperation</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="2.6s">
+                               <div class="partner-logo partner-logo--img">
+                                   <img src="images/UNICANCER.jpg" alt="IAEA">
+                              </div>
+                              <h4>INSTITUT PAOLI CALMETTES unicancer Marseille</h4>
+                              <p>for HR & Technical Cooperation</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="2.8s">
+                              <div class="partner-logo partner-logo--img">
+                                   <img src="images/Korean University Anam Hospital.png" alt="IAEA">
+                              </div>
+                              <h4>Korean University Anam Hospital</h4>
+                              <p>for Human Resources</p>
+                         </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                         <div class="partner-card wow fadeInUp" data-wow-delay="3s">
+                               <div class="partner-logo partner-logo--img">
+                                   <img src="images/ Hospital of Kunming Medical University.png" alt="IAEA">
+                              </div>
+                              <h4>Yunan Cancer Hospital (The Third Affiliated Hospital of Kunming Medical University) </h4>
+                              <p>Employee training and joint research projects</p>
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </section>
+
+
+     <!-- GOOGLE MAP -->
+     <section id="google-map">
+     <!-- How to change your own map point
+            1. Go to Google Maps
+            2. Click on your location point
+            3. Click "Share" and choose "Embed map" tab
+            4. Copy only URL and paste it within the src="" field below
+	-->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4556.298137904611!2d104.85644367564201!3d11.497086845486521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095bd552e4db9d%3A0x3819bb33df4944a3!2sLuang%20M%C3%A8%20Hospital!5e1!3m2!1sen!2skh!4v1781059654780!5m2!1sen!2skh" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+     </section>           
+
+
+     <!-- FOOTER -->
+     <footer data-stellar-background-ratio="5">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-4">
+                         <div class="footer-thumb"> 
+                              <h4 class="wow fadeInUp" data-wow-delay="0.4s">Contact Info</h4>
+                              <p></p>
+
+                              <div class="contact-info">
+                                   <p><i class="fa fa-phone"></i> 010-228-965</p>
+                                   <p><i class="fa fa-envelope-o"></i> <a href="#">luangme.hospital@gmail.com</a></p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-4"> 
+                         <div class="footer-thumb">
+                              <div class="opening-hours">
+                                   <h4 class="wow fadeInUp" data-wow-delay="0.4s">Opening Hours</h4>
+                                   <p>Monday - Sunday <span></span></p>
+                                   <p>24 hours</p>
+                    </div>
+                         <div class="col-md-12 col-sm-4 text-align-right">
+                              <div class="angle-up-btn"> 
+                                  <a href="#top" class="smoothScroll wow fadeInUp" data-wow-delay="1.2s"><i class="fa fa-angle-up"></i></a>
+                              </div>
+                         </div>   
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+
+     <!-- SCRIPTS -->
+     <script src="js/jquery.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/jquery.sticky.js"></script>
+     <script src="js/jquery.stellar.min.js"></script>
+     <script src="js/wow.min.js"></script>
+     <script src="js/smoothscroll.js"></script>
+     <script src="js/owl.carousel.min.js"></script>
+     <script src="js/custom.js"></script>
+
+</body>
+</html>
