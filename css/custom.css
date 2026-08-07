@@ -1,0 +1,318 @@
+/* Luang Mè Hospital Custom Styles */
+:root {
+  --primary-color: #1f6fb2;
+  --primary-color-hover: #154a82;
+  --secondary-color: #1f3e6f;
+  --text-color: #555;
+  --text-color-light: #5e6b7e;
+  --background-gradient-start: rgba(255, 255, 255, 0.98);
+  --background-gradient-end: rgba(242, 247, 253, 0.98);
+}
+
+body {
+  background: linear-gradient(180deg, var(--background-gradient-start), var(--background-gradient-end));
+}
+
+section#about {
+  position: relative;
+  padding: 100px 0 80px;
+  background: rgba(255, 255, 255, 0.22);
+}
+
+section#about::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+section#about .container {
+  position: relative;
+  z-index: 1;
+}
+
+section#about .section-title {
+  margin-bottom: 50px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  box-shadow: 0 28px 45px rgba(0, 0, 0, 0.08);
+  padding: 32px 26px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 55px rgba(0, 0, 0, 0.14);
+}
+
+.glass-card .dept-sticker {
+  display: inline-flex;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(31, 111, 178, 0.14);
+  color: var(--primary-color);
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  border: 1px solid rgba(31, 111, 178, 0.2);
+}
+
+.glass-card h4 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  line-height: 1.2;
+}
+
+.glass-card p {
+  margin: 0;
+  color: var(--text-color);
+  line-height: 1.7;
+  flex: 1;
+}
+
+section#about .row > [class*="col-"] {
+  margin-bottom: 30px;
+}
+
+.section-title.white-title h2,
+.section-title.white-title p {
+  color: #fff;
+}
+
+#team .team-grid {
+  margin-top: 30px;
+}
+
+#team .team-grid > [class*="col-"] {
+  margin-bottom: 30px;
+}
+
+#team .doctor-card {
+  background: rgba(255, 255, 255, 0.98);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+#team .doctor-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 48px rgba(0, 0, 0, 0.14);
+}
+
+#team .doctor-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+#team .doctor-info {
+  padding: 26px 24px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#team .doctor-info h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  color: var(--secondary-color);
+}
+
+#team .doctor-info p {
+  margin: 0 0 16px;
+  color: #4d4d4d;
+  font-size: 15px;
+}
+
+#team .doctor-contact-info {
+  border-top: 1px solid rgba(31, 111, 178, 0.14);
+  padding-top: 16px;
+  margin-top: auto;
+}
+
+#team .doctor-contact-info p {
+  margin-bottom: 8px;
+  color: var(--text-color);
+  font-size: 14px;
+}
+
+#team .doctor-contact-info a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+#team .doctor-card .social-icon {
+  justify-content: center;
+  gap: 10px;
+  margin-top: 14px;
+  display: flex;
+  padding-bottom: 12px;
+}
+
+#team .doctor-card .social-icon li a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 16px;
+  background: var(--primary-color);
+  color: #fff;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+}
+
+#team .doctor-card .social-icon li a:hover {
+  background: var(--primary-color-hover);
+}
+
+section#news .row {
+  row-gap: 32px;
+}
+
+section#news .col-md-4 {
+  margin-bottom: 32px;
+}
+
+section#news .news-thumb {
+  padding-bottom: 20px;
+}
+
+.partnership-section {
+  position: relative;
+  padding: 90px 0 80px;
+  background: linear-gradient(180deg, rgba(17, 100, 173, 0.08), rgba(245, 248, 255, 0.98));
+}
+
+.partnership-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  pointer-events: none;
+}
+
+.partnership-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.partnership-section .section-title,
+.partnership-section .subsection-title {
+  margin-bottom: 40px;
+}
+
+.partnership-section .section-title h2,
+.partnership-section .subsection-title h3 {
+  color: var(--secondary-color);
+}
+
+.partnership-section .section-title p,
+.partnership-section .subsection-title p {
+  color: var(--text-color-light);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.partnership-section .subsection-title h3 {
+  margin-top: 24px;
+  font-size: 26px;
+  letter-spacing: 0.2px;
+}
+
+.partnership-section .partner-card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 28px;
+  padding: 32px 28px;
+  min-height: 220px;
+  box-shadow: 0 26px 45px rgba(29, 76, 122, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(31, 111, 178, 0.12);
+}
+
+.partnership-section .partner-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 55px rgba(29, 76, 122, 0.12);
+}
+
+.partnership-section .partner-logo {
+  display: inline-flex;
+  width: 96px;
+  height: 96px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: transparent;
+  color: var(--primary-color);
+  font-size: 32px;
+  margin-bottom: 18px;
+  border: none;
+  overflow: hidden;
+}
+
+.partnership-section .partner-logo img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.partnership-section .partner-logo.partner-logo--img {
+  border-radius: 0;
+}
+
+.partnership-section .partner-logo.partner-logo--icon {
+  border-radius: 0;
+}
+
+.partnership-section .partner-card h4 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+.partnership-section .partner-card p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--text-color-light);
+  line-height: 1.75;
+}
+
+.partnership-section .partner-grid [class*="col-"] {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+  .partnership-section .partner-card {
+    padding: 24px 20px;
+  }
+  .partnership-section .partner-logo {
+    width: 80px;
+    height: 80px;
+    font-size: 28px;
+    padding: 8px;
+  }
+}
